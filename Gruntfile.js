@@ -79,7 +79,6 @@ module.exports = function(grunt) {
       prodServer: {
         command: 'git push azure master'
       }
-
     },
   });
 
@@ -94,6 +93,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('server-dev', function (target) {
     // Running nodejs in a different process and displaying output on the main console
+    process.env.PORT = 3000; // Set PORT env variable for dev server.
     var nodemon = grunt.util.spawn({
          cmd: 'grunt',
          grunt: true,
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     'jshint',
     'concat',
     'uglify',
-    // 'mochaTest'
+    'test'
   ]);
 
   grunt.registerTask('upload', function(n) {
