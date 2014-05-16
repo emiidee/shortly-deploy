@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           'public/client/link.js',
           'public/client/links.js',
           'public/client/linkView.js',
-          'public/client/linkViews.js',
+          'public/client/linksView.js',
           'public/client/createLinkView.js'
         ],
         dest: 'public/dist/app.js',
